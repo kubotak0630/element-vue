@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- import CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+   
+</head>
+<body>
+
+    <div id="app">
+        <div>Hello Vue.js</div>
+        <p>{{flg}}</p>
+        <el-button type="primary" @click="handleClick">Button</el-button>
+        <el-button type="primary" size="medium">MEDIUM</el-button>
+        <el-button type="primary" size="mini">MINI</el-button>
+        <srcp-code-show v-bind:table-data="tableData"></srcp-code-show>
+        
+    
+        <!-- <pre>{{$data}}</pre> -->
+    </div>
+
+    <!-- import Vue before Element -->
+    <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+    <!-- import JavaScript -->
+    <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+
+    <!-- auto injectoin by HtmlWebpackPlugin, <script src="./bundle.js"></script> -->
+</body>
+
+</html>
