@@ -21,7 +21,7 @@
 export default {
   name: 'SrcpCodeShow',
   props: {
-    tableData: {},
+    tableData: [],
   },
   data: function() {
     return {
