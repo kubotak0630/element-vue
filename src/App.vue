@@ -1,17 +1,20 @@
- 
- 
-import Vue from 'vue';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-import locale from 'element-ui/lib/locale/lang/ja'
+<template>
+  <div id="app">
 
+    <div>Hello Vue.js</div>
+    <p>{{flg}}</p>
+    <el-button type="primary" @click="handleClick">Button</el-button>
+    <srcp-code-show v-bind:table-data="tableData"></srcp-code-show>
+
+  </div>
+</template>
+
+<script>
 import SrcpCodeShow from './components/SrcpCodeShow.vue'
 
-Vue.use(ElementUI, {locale});
-Vue.config.productionTip = false
-  
-const app = new Vue({
-  el: '#app',
+
+export default {
+  name: 'App',
   components: {
     SrcpCodeShow
   },
@@ -37,4 +40,9 @@ const app = new Vue({
       }
     }
   }
-})
+}
+</script>
+
+<style>
+
+</style>
