@@ -4,6 +4,7 @@
     <div>Hello Vue.js</div>
     <p>{{flg}}</p>
     <el-button type="primary" @click="handleClick">Button</el-button>
+		<el-button type="primary" @click="onButtonChangeData">ChageData</el-button>
     <srcp-code-show v-bind:table-data="tableData"></srcp-code-show>
 
   </div>
@@ -38,6 +39,19 @@ export default {
       else {
         this.tableData = this.rcp1
       }
+    },
+    onButtonChangeData: function() {
+      this.tableData = [];
+      for (let i = 0; i < 200; i++) {
+        const tempString0 = Math.random().toString(32).substring(2);
+        const tempString1 = Math.random().toString(32).substring(2);
+        const tempString2 = Math.random().toString(32).substring(2);
+        const tempString3 = Math.random().toString(32).substring(2);
+        const tempString4 = Math.random().toString(32).substring(2);  
+        this.tableData.push({pc:i, name: tempString0, msg1: tempString1, msg2: tempString2, msg3: tempString3})
+      }
+      // console.log(this.tableData)
+      console.log('tableData Created')
     }
   }
 }
