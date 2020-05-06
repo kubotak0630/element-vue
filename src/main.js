@@ -8,6 +8,8 @@ import App from "./App.vue";
 Vue.use(ElementUI, { locale });
 Vue.config.productionTip = false;
 
+console.log("aaa");
+
 new Vue({
   render: (h) => h(App),
 }).$mount("#app");

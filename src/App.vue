@@ -50,9 +50,6 @@ export default {
           const tempString3 = Math.random()
             .toString(32)
             .substring(2);
-          const tempString4 = Math.random()
-            .toString(32)
-            .substring(2);
           this.tableData.push({
             pc: i,
             name: tempString0,

@@ -68,6 +68,9 @@ export default {
       radio: 5,
     };
   },
+  created: function() {
+    console.log("Call created");
+  },
   methods: {
     arraySpanMethod: function({ row, column, rowIndex, columnIndex }) {
       // if (rowIndex < 4) {
@@ -93,10 +96,6 @@ export default {
       const temp = this.tableData.pop();
       this.tableData.push(temp);
     },
-  },
-
-  created: function() {
-    console.log("Call created");
   },
 };
 </script>
