@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 module.exports = {
-  mode: "development",
+  mode: process.env.NODE_ENV,
   // エントリーポイントの設定
   entry: "./src/main.js",
   // 出力の設定
