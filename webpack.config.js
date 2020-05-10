@@ -3,6 +3,11 @@ const outputPath = path.resolve(__dirname, "dist");
 const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+let devtoolSetting = "none";
+if (process.env.NODE_ENV === "development") {
+  devtoolSetting = "source-map"; //デバッグがオリジナルソースでできる
+}
+
 module.exports = {
   mode: "development",
   // エントリーポイントの設定
@@ -72,5 +77,5 @@ module.exports = {
   devServer: {
     contentBase: outputPath,
   },
-  devtool: "source-map", //デバッグがオリジナルソースでできる
+  devtool: devtoolSetting,
 };
